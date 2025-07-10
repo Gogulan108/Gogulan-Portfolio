@@ -8,8 +8,8 @@ const projects = [
     description:
       "Designed and developed my personal portfolio to showcase my skills, experience, and projects. Built with React, TypeScript, and Tailwind CSS, featuring dark mode, responsive design, and smooth animations with Framer Motion.",
     tech: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/yourusername/your-chat-app-repo", // replace with your repo
-    demo: "https://your-chat-app-demo.vercel.app", // replace with your live demo
+    github: "https://github.com/Gogulan108/Gogulan-Portfolio",
+    demo: "https://gogulan-portfolio.vercel.app/",
   },
   {
     title: "Real-Time Chat Platform (Slack Clone)",
@@ -19,8 +19,8 @@ const projects = [
     Includes robust security rules and a responsive, interactive interface.
   `,
     tech: ["React", "Firebase Firestore", "Tailwind CSS"],
-    github: "https://github.com/yourusername/your-chat-app-repo", // replace with your repo
-    demo: "https://your-chat-app-demo.vercel.app", // replace with your live demo
+    github: "https://github.com/Gogulan108/Comm-Sync",
+    demo: "https://your-chat-app-demo.vercel.app",
   },
   {
     title: "SCALAR Fleet Platform – Eco Performance Dashboard",
