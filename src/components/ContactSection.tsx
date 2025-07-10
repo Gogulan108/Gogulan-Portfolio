@@ -2,8 +2,10 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { Mail, Linkedin, Instagram, Github } from "lucide-react";
-
+import { Mail, Linkedin, Github } from "lucide-react";
+const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 const ContactSection: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
   const [sent, setSent] = useState(false);
@@ -38,26 +40,19 @@ const ContactSection: React.FC = () => {
     if (Object.keys(errors).length > 0) return;
 
     setLoading(true);
-    emailjs
-      .sendForm(
-        "service-Gogulkrish", //EmailJS service ID
-        "template_p28w0go", //EmailJS template ID
-        form.current!,
-        "Ysi99nnvwyN2sQF9z" //EmailJS public key
-      )
-      .then(
-        () => {
-          setSent(true);
-          setLoading(false);
-          setFormErrors({});
-          form.current?.reset();
-        },
-        (error) => {
-          setLoading(false);
-          console.log(error);
-          alert("Failed to send message. Please try again.");
-        }
-      );
+    emailjs.sendForm(serviceId, templateId, form.current!, publicKey).then(
+      () => {
+        setSent(true);
+        setLoading(false);
+        setFormErrors({});
+        form.current?.reset();
+      },
+      (error) => {
+        setLoading(false);
+        console.log(error);
+        alert("Failed to send message. Please try again.");
+      }
+    );
   };
 
   return (
