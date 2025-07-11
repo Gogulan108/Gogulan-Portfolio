@@ -20,7 +20,7 @@ const projects = [
   `,
     tech: ["React", "Firebase Firestore", "Tailwind CSS"],
     github: "https://github.com/Gogulan108/Comm-Sync",
-    demo: "https://your-chat-app-demo.vercel.app",
+    demo: "https://gogulan-portfolio.vercel.app/",
   },
   {
     title: "SCALAR Fleet Platform – Eco Performance Dashboard",
